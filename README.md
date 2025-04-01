@@ -31,7 +31,61 @@ Before you begin, make sure you have the following installed:
 Clone the repository to your local machine by running:
 
 ```bash
-git clone https://github.com/yourusername/subscription-project.git
+git clone  https://github.com/charanpagadala07/Subscription-Mangement-System.git
+```
 
 ### Step 2: Install dependencies
+
+Navigate to the project directory and install the required dependencies:
+
+```bash
+cd subscription-project
+npm install
+```
+
+### Step 3 : Setup your .env file
+Instead of using the .env file, this project uses .env.development.local for local development configurations
+```bash
+PORT = 
+
+NODE_ENV = 'development'
+
+DB_URI = "<mongodb-url"
+
+JWT_SECRET = ''
+
+JWT_EXPIRES_IN = 
+
+ARCJET_KEY = 
+ARCJET_ENV= 'development'
+
+```
+### Step 4 : Run the application
+To start the server in development mode using nodemon, run the following command:
+```bash
+npm run dev
+```
+
+
+## Why ArcJet?
+
+ArcJet is integrated into this system to provide **security-as-code**. Here's why it is an excellent choice:
+
+- **Bot Detection**: ArcJet monitors abnormal user behaviors, such as excessive requests from the same IP or user, and flags potential bot activity.
+- **Real-time Alerts**: The system alerts you whenever suspicious behavior is detected, allowing you to take immediate action.
+- **Easy Integration**: ArcJet provides an easy way to integrate bot detection and security features with minimal configuration.
+- **Customizable Security**: Adjust the security configuration based on your environment (e.g., development, production).
+- **Scalable**: ArcJet scales seamlessly with your app, ensuring security regardless of traffic volume.
+
+## How to Use ArcJet
+
+1. **Sign Up for ArcJet**: First, sign up for an ArcJet account at [ArcJet's website](https://www.arcjet.com).
+2. **Obtain Your ArcJet API Key**: Once you've signed up, you'll be issued an API key that you'll use to authenticate your application.
+3. **Add the ArcJet Key to Your `.env` File**: Open the `.env.development.local` file you created earlier and insert your ArcJet API key:
+
+    ```bash
+    ARCJET_KEY='your-arcjet-api-key-here'
+    ```
+
+4. **ArcJet in Action**: Once configured, ArcJet will start monitoring user traffic, detecting potential bots, and reporting abnormal activities to keep your application secure.
 
