@@ -32,3 +32,6 @@ Clone the repository to your local machine by running:
 
 ```bash
 git clone https://github.com/yourusername/subscription-project.git
+
+### Step 2: Install dependencies
+
