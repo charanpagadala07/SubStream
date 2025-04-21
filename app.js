@@ -7,6 +7,7 @@ import connectToDatabase from "./database/mongodb.js";
 import errorMiddleware from "./middleware/error.middleware.js";
 import cookieParser from "cookie-parser";
 import arcjetMiddleware from "./middleware/arcjet.middleware.js";
+import workflowRoutes from "./routes/workflow.routes.js";
 
 const app = express();
 
@@ -18,6 +19,8 @@ app.use(arcjetMiddleware);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/subscriptions', subscriptionRoutes);
+app.use('/api/v1/workflows', workflowRoutes);
+
 
 app.use(errorMiddleware);
 
